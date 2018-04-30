@@ -1,0 +1,98 @@
+@import 'normalize';
+@font-face {
+    font-family: "TruenoLt";
+    src: url("../fonts/TruenoLt.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "TruenoLt", sans-serif;
+}
+
+.container {
+    width: 1110px;
+    margin: auto;
+}
+
+.header-top {
+    background-color: #472424;
+    font-size: 0px;
+    a {
+        color: #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    >.container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.about-links {
+    a {
+        font-size: 13px;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.account-actions {
+    a {
+        font-size: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        &:hover {
+            border-color: #ff7373;
+            background-color: #ff7373;
+        }
+    }
+}
+
+.login {
+    border-right: 1px solid #5a3a3a;
+    border-left: 1px solid #5a3a3a;
+}
+
+.cart {
+    padding-left: 40px;
+    .price {
+        //margin-right: 5px;
+    }
+    .items-count {
+        color: #dcc5b8;
+    }
+}
+
+.header-main {
+    background-color: #623232;
+    >.container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .logo {
+        margin-top: 25px;
+    }
+}
+
+.header-navigation {
+    a {
+        font-size: 16px;
+        line-height: 26px;
+        color: #fff;
+        padding: 30px 10px 26px 10px;
+        margin-right: 10px;
+        border-bottom: 4px solid #623232;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.selected {
+            color: #ff7373;
+            border-color: #ff7373;
+            padding-bottom: -4px;
+        }
+    }
+}
