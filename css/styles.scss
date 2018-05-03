@@ -20,6 +20,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "TruenoUltLt";
+    src: url("../fonts/TruenoUltLt.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: "TruenoLt", sans-serif;
 }
@@ -34,8 +41,8 @@ body {
     font-size: 0px;
     a {
         color: #fff;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 17px;
+        padding-bottom: 19px;
     }
     >.container {
         display: flex;
@@ -45,8 +52,9 @@ body {
 
 .about-links {
     a {
+        text-transform: capitalize;
         font-size: 13px;
-        margin-right: 40px;
+        margin-right: 39px;
         &:last-child {
             margin-right: 0;
         }
@@ -56,11 +64,18 @@ body {
 .account-actions {
     a {
         font-size: 13px;
-        padding-left: 20px;
+        padding-left: 18px;
         padding-right: 20px;
         &:hover {
             border-color: #ff7373;
             background-color: #ff7373;
+        }
+    }
+    .cart {
+        padding-left: 30px;
+        background: url("../images/sprite.png") no-repeat -165px 7px;
+        .items-count {
+            color: #dcc5b8;
         }
     }
 }
@@ -68,16 +83,6 @@ body {
 .login {
     border-right: 1px solid #5a3a3a;
     border-left: 1px solid #5a3a3a;
-}
-
-.cart {
-    padding-left: 40px;
-    .price {
-        //margin-right: 5px;
-    }
-    .items-count {
-        color: #dcc5b8;
-    }
 }
 
 .header-main {
@@ -88,20 +93,25 @@ body {
         align-items: flex-start;
     }
     .logo {
-        margin-top: 25px;
+        margin-top: 22px;
     }
 }
 
 .header-navigation {
     a {
+        text-transform: capitalize;
         font-size: 16px;
         line-height: 26px;
         color: #fff;
-        padding: 30px 10px 26px 10px;
-        margin-right: 10px;
+        padding: 25px 10px 21px 9px;
+        margin-right: 11px;
         border-bottom: 4px solid #623232;
         &:last-child {
             margin-right: 0;
+            padding-right: 0;
+        }
+        &:nth-child(3) {
+            margin-right: 13px;
         }
         &.selected {
             color: #ff7373;
@@ -118,38 +128,45 @@ body {
     &::after {
         content: "";
         position: absolute;
-        width: 829px;
-        height: 732px;
-        background: url("../images/Airmax.png");
-        bottom: -46px;
-        left: 0;
+        width: 785px;
+        height: 640px;
+        background: url("../images/airmax.png");
+        bottom: 0px;
+        left: 112px;
     }
 }
 
 .offer-description {
-    padding: 135px 0 135px 48%;
+    padding: 131px 0 134px 51.4%;
     .price {
         font-size: 30px;
         color: #623232;
+        font-family: "TruenoUltLt", sans-serif;
+        margin-bottom: 4px;
     }
     .name {
         font-family: "TruenoUltBlk", sans-serif;
         font-size: 70px;
         color: #623232;
+        margin-left: -2px;
+        margin-bottom: 7px;
     }
     .variants-number {
         font-family: "TruenoUltBlk", sans-serif;
         font-size: 50px;
         color: #ff7373;
+        margin-bottom: 20px;
     }
     .description {
         color: #8a8784;
         font-size: 16px;
-        margin-bottom: 10px;
+        width: 420px;
+        margin-bottom: 33px;
+        line-height: 26px;
     }
     .btn {
         background-color: #ff7373;
-        padding: 17px 40px;
+        padding: 14px 46px 16px 46px;
         color: #fff;
         font-family: "TruenoBd", sans-serif;
         font-size: 16px;
@@ -163,21 +180,23 @@ body {
     grid-template-rows: repeat(2, 255px);
     grid-gap: 30px;
     grid-template-areas: "big-card big-card medium-card medium-card" "big-card big-card small-card-1 small-card-2";
-    margin-bottom: 100px;
+    margin-bottom: 92px;
 }
 
 .big-card {
     grid-area: big-card;
     background-image: url("../images/big card.jpg");
     position: relative;
-    padding-top: 45px;
+    padding-top: 38px;
     p {
         margin: auto;
+        padding-left: 6px;
         width: 300px;
+        line-height: 35px;
         font-size: 30px;
         color: #fff;
         text-align: center;
-        margin-bottom: 335px;
+        margin-bottom: 334px;
     }
     .colored {
         text-transform: uppercase;
@@ -187,7 +206,7 @@ body {
     .btn {
         color: #000;
         background-color: #4bd8cd;
-        padding: 17px 30px;
+        padding: 14px 30px 16px 30px;
         font-family: "TruenoBd", sans-serif;
         text-transform: uppercase;
         font-size: 16px;
@@ -204,6 +223,15 @@ body {
         bottom: 257px;
         background: url("../images/big pseudo.png") no-repeat;
     }
+    &::before {
+        content: "";
+        width: 32px;
+        height: 48px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background: url("../images/sprite.png") no-repeat -16px -105px;
+    }
 }
 
 .medium-card {
@@ -212,14 +240,15 @@ body {
     position: relative;
     padding-left: 220px;
     padding-right: 70px;
-    padding-top: 55px;
+    padding-top: 52px;
     p {
         color: #fff;
         margin: auto;
         font-size: 30px;
+        line-height: 36px;
         color: #fff;
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 24px;
     }
     .colored {
         font-size: 30px;
@@ -229,7 +258,7 @@ body {
     .btn {
         color: #fff;
         background-color: #623232;
-        padding: 17px 30px;
+        padding: 14px 30px 16px 30px;
         font-family: "TruenoBd", sans-serif;
         text-transform: uppercase;
         font-size: 16px;
@@ -241,7 +270,7 @@ body {
         width: 200px;
         height: 280px;
         position: absolute;
-        left: -13px;
+        left: -10px;
         bottom: -3px;
         background: url("../images/medium card.png") no-repeat;
     }
@@ -250,11 +279,13 @@ body {
 .small-card-1 {
     grid-area: small-card-1;
     background: url("../images/small card 1.jpg") no-repeat;
-    padding-top: 145px;
-    p {
+    padding-top: 139px;
+    a {
+        display: block;
         margin: auto;
         text-align: center;
         font-size: 30px;
+        line-height: 36px;
         color: #fff;
     }
     .colored {
@@ -268,10 +299,12 @@ body {
     grid-area: small-card-2;
     background-color: #cecece;
     position: relative;
-    padding-top: 35px;
-    p {
+    padding-top: 27px;
+    a {
+        display: block;
         width: 200px;
         font-size: 30px;
+        line-height: 36px;
         color: #6b7072;
         margin: auto;
         text-align: center;
@@ -280,6 +313,7 @@ body {
         color: #fff;
         text-transform: uppercase;
         font-family: "TruenoBd", sans-serif;
+        text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     }
     &::after {
         content: "";
@@ -287,21 +321,21 @@ body {
         width: 224px;
         position: absolute;
         bottom: 0;
-        left: 50%;
+        left: 50.3%;
         transform: translateX(-50%);
         background: url("../images/small card 2.png") no-repeat;
     }
 }
 
 .catalog {
-    margin-bottom: 80px;
+    margin-bottom: 69px;
     &-categories {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
         font-size: 0;
         text-align: center;
         a {
             text-transform: uppercase;
-            margin-right: 20px;
+            margin-right: 37px;
             color: #bdb9b5;
             font-size: 30px;
             &:last-child {
@@ -323,29 +357,57 @@ body {
         line-height: 20px;
         width: 255px;
         height: 350px;
-        padding: 25px 25px;
+        padding: 26px 26px 25px 29px;
         border: 1px solid #e0dfde;
         margin-right: 30px;
         margin-bottom: 30px;
         &:nth-child(4n) {
             margin-right: 0;
         }
-        .new-price {
-            color: #8a8784;
-            font-size: 22px;
-            &.colored {
+        &.discount {
+            position: relative;
+            .new-price {
                 color: #ff7373;
             }
+            &::after {
+                box-sizing: border-box;
+                content: "";
+                color: #fff;
+                position: absolute;
+                text-align: center;
+                right: 0;
+                top: 22px;
+                padding-top: 4px;
+                padding-left: 2px;
+                padding-bottom: 0;
+                font-family: "TruenoBd";
+                background-color: #ff7373;
+                width: 61px;
+                height: 28px;
+            }
+        }
+        &.discount-25::after {
+            content: "-25%"
+        }
+        &.discount-50::after {
+            content: "-50%"
+        }
+        .new-price {
+            color: #8a8784;
+            font-size: 24px;
+            margin: 1px 0 9px 0px;
         }
         .old-price {
+            margin-left: 0px;
             min-height: 18px;
+            //margin-bottom: 6px;
             font-size: 16px;
             color: #8a8784;
             text-decoration: line-through;
         }
         .picture-container {
             display: flex;
-            min-height: 180px;
+            min-height: 100px;
             margin-bottom: auto;
         }
         .item-picture {
@@ -354,39 +416,121 @@ body {
         }
         .gender {
             font-family: "TruenoBd", sans-serif;
-            font-size: 14px;
+            font-size: 16px;
+            margin-bottom: 3px;
             color: #8a8784;
+            margin-top: auto;
             text-transform: uppercase;
         }
         .item-description {
-            font-size: 14px;
+            margin-bottom: 3px;
+            font-size: 16px;
+            line-height: 26px;
             color: #8a8784;
-            width: 180px;
         }
         .item-article {
             color: #bdb9b5;
-            font-size: 12px;
+            font-size: 13px;
+        }
+    }
+}
+
+.catalog-item {
+    &:nth-child(1) {
+        .picture-container {
+            margin-top: 4px;
+            margin-left: -2px;
+        }
+    }
+    &:nth-child(2) {
+        .picture-container {
+            margin-top: 8px;
+            margin-left: -2px;
+        }
+    }
+    &:nth-child(3) {
+        .picture-container {
+            margin-top: 2px;
+            margin-left: 1px;
+        }
+    }
+    &:nth-child(4) {
+        .picture-container {
+            margin-top: 11px;
+            margin-left: -2px;
+        }
+    }
+    &:nth-child(5) {
+        .picture-container {
+            margin-top: -7px;
+            margin-left: -2px;
+        }
+    }
+    &:nth-child(6) {
+        .picture-container {
+            margin-top: 0px;
+            margin-left: -2px;
+        }
+    }
+    &:nth-child(7) {
+        .picture-container {
+            margin-top: 14px;
+            margin-left: -1px;
+        }
+    }
+    &:nth-child(8) {
+        .picture-container {
+            margin-top: 0px;
+            margin-left: -3px;
         }
     }
 }
 
 .manufacturers {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     padding-left: 35px;
     padding-right: 35px;
     margin-bottom: 100px;
+    img {
+        &:nth-child(1) {
+            margin-top: 0px;
+            margin-left: -1px;
+            margin-right: 88px;
+        }
+        &:nth-child(2) {
+            margin-top: 8px;
+            margin-right: 78px;
+        }
+        &:nth-child(3) {
+            margin-top: 3px;
+            margin-right: 83px;
+        }
+        &:nth-child(4) {
+            margin-top: 11px;
+            margin-right: 79px;
+        }
+        &:nth-child(5) {
+            margin-top: 6px;
+            margin-right: 80px;
+        }
+        &:nth-child(6) {
+            margin-top: 18px;
+        }
+    }
 }
 
 .feedback {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 99px;
+    padding-bottom: 100px;
     margin-bottom: 80px;
     background: url("../images/feedback background.jpg");
     &-text {
-        padding: 50px;
+        text-align: center;
+        padding: 42px 50px 43px 50px;
         font-size: 16px;
+        line-height: 26px;
         color: #fff;
         background-color: rgba(255, 255, 255, 0.1);
         position: relative;
@@ -408,34 +552,37 @@ body {
     padding-left: 100px;
     padding-right: 100px;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
     &-item {
-        width: 192px;
+        min-width: 190px;
         text-align: center;
         font-family: "TruenoBd", sans-serif;
         font-size: 16px;
         color: #fff;
         line-height: 26px;
+        .avatar {
+            margin-bottom: 15px;
+        }
         .stars {
             width: 117px;
             height: 20px;
             margin-left: 50%;
             transform: translateX(-50%);
         }
-        &:nth-child(1) {
-            .stars {
-                background: url("../images/5 stars.png");
-            }
+        .five-stars {
+            background: url("../images/sprite.png") 0px -56px;
         }
-        &:nth-child(2) {
-            .stars {
-                background: url("../images/4 stars.png");
-            }
+        .four-stars {
+            background: url("../images/sprite.png") 0px -26px;
         }
-        &:nth-child(3) {
-            .stars {
-                background: url("../images/3 stars.png");
-            }
+        .three-stars {
+            background: url("../images/sprite.png");
+        }
+        &:first-child {
+            opacity: 0.5;
+        }
+        &:last-child {
+            opacity: 0.5;
         }
     }
 }
@@ -448,7 +595,7 @@ body {
         font-size: 30px;
         color: #623232;
         text-transform: uppercase;
-        margin-bottom: 50px;
+        margin-bottom: 42px;
     }
     &-items {
         display: flex;
@@ -458,19 +605,29 @@ body {
         width: 350px;
         min-height: 350px;
         padding: 30px;
+        padding-bottom: 20px;
         text-align: left;
-        padding-top: 230px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         margin-bottom: 100px;
         .news-date {
             font-family: "TruenoBd", sans-serif;
             color: #fff;
             text-transform: uppercase;
+            margin-bottom: 4px;
         }
         .news-text {
             color: #fff;
             line-height: 26px;
+            margin-bottom: 4px;
         }
         .comments {
+            font-size: 13px;
+            padding-top: 3px;
+            padding-bottom: 8px;
+            padding-left: 28px;
+            background: url("../images/sprite.png") no-repeat -657px -716px;
             color: #ff7373;
         }
         &:nth-child(1) {
@@ -482,5 +639,239 @@ body {
         &:nth-child(3) {
             background: url("../images/news 3.png");
         }
+    }
+}
+
+.help {
+    background-color: #ff7373;
+    color: #fff;
+    padding-top: 65px;
+    padding-bottom: 50px;
+    .heading {
+        font-family: "TruenoBd", sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        position: relative;
+        &::after {
+            content: "";
+            width: 60px;
+            height: 42px;
+            left: -28px;
+            top: 14px;
+            transform: translateX(-100%);
+            position: absolute;
+            background: url("../images/sprite.png") no-repeat -531px -132px;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: auto;
+    }
+    .btn {
+        background-color: #623232;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 11px;
+        padding: 14px 30px 16px 28px;
+        font-family: "TruenoBd", sans-serif;
+    }
+    .container {
+        padding-left: 88px;
+        height: 85px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: space-between;
+    }
+}
+
+footer {
+    background-color: #623232;
+    hr {
+        border: none;
+        color: #795151;
+        background-color: #795151;
+        size: 1px;
+        height: 1px;
+    }
+    .advantage {
+        text-transform: capitalize;
+        text-align: center;
+        width: 150px;
+        color: #fff;
+        line-height: 26px;
+        padding-top: 63px;
+        .low {
+            text-transform: lowercase;
+        }
+        &:nth-child(1) {
+            background: url("../images/sprite.png") no-repeat 37px -474px;
+        }
+        &:nth-child(2) {
+            background: url("../images/sprite.png") no-repeat -151px -481px;
+        }
+        &:nth-child(3) {
+            background: url("../images/sprite.png") no-repeat -150px -704px;
+        }
+        &:nth-child(4) {
+            background: url("../images/sprite.png") no-repeat 37px -266px;
+        }
+        &:nth-child(5) {
+            background: url("../images/sprite.png") no-repeat -149px -266px;
+        }
+        &:nth-child(6) {
+            background: url("../images/sprite.png") no-repeat 40px -704px;
+        }
+    }
+    .advantages {
+        padding: 50px 6px 35px 6px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts-and-links {
+    //padding-top: 79px;
+    padding-top: 92px;
+    padding-bottom: 92px;
+    display: grid;
+    grid-template-columns: 330px 190px 190px 190px 210px;
+    grid-template-rows: repeat(3, 55px);
+    grid-row-gap: 20px;
+    .heading {
+        color: #ea6a6a;
+        font-family: "TruenoBd", sans-serif;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 10px;
+    }
+    a {
+        color: #fff;
+    }
+    p {
+        color: #fff;
+    }
+    .contact {
+        position: relative;
+        padding-left: 75px;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            left: 0;
+            top: 0;
+        }
+    }
+    .phone {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        &::after {
+            background: url("../images/sprite.png") no-repeat -630px 8px, #ff7373;
+        }
+    }
+    .email {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        &::after {
+            background: url("../images/sprite.png") no-repeat -331px 9px, #ff7373;
+        }
+    }
+    .address {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        &::after {
+            background: url("../images/sprite.png") no-repeat -480px 8px, #ff7373;
+        }
+    }
+    .navigation {
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
+    .categories {
+        grid-column: 3/4;
+        grid-row: 1/4;
+    }
+    .sales {
+        grid-column: 4/5;
+        grid-row: 1/4;
+    }
+    .support {
+        grid-column: 5/6;
+        grid-row: 1/4;
+    }
+}
+
+.contact {
+    .heading {
+        margin-top: 2px;
+        margin-bottom: 4px;
+        line-height: 26px;
+    }
+}
+
+.link-column {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    .heading {
+        margin-bottom: 22px;
+    }
+    a {
+        margin-bottom: 18px;
+    }
+}
+
+.copyright-and-social {
+    padding-top: 30px;
+    padding-bottom: 45px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    p {
+        color: #fff;
+        margin-top: 11px;
+        margin-left: -4px;
+    }
+    .logo {
+        margin-top: 4px;
+    }
+}
+
+.social-links {
+    .soc {
+        vertical-align: top;
+        width: 30px;
+        height: 30px;
+    }
+    .twitter {
+        background: url("../images/sprite.png") no-repeat -462px -716px;
+        width: 27px;
+        height: 22px;
+        margin-right: 26px;
+        margin-top: 10px;
+    }
+    .facebook {
+        background: url("../images/sprite.png") no-repeat -469px -474px;
+        width: 13px;
+        height: 27px;
+        margin-right: 25px;
+        margin-top: 7px;
+    }
+    .pinterest {
+        background: url("../images/sprite.png") no-repeat -462px -595px;
+        width: 27px;
+        height: 27px;
+        margin-top: 7px;
+        margin-right: 18px;
+    }
+    .youtube {
+        width: 27px;
+        height: 19px;
+        background: url("../images/sprite.png") no-repeat -462px -361px;
+        margin-top: 11px;
     }
 }
