@@ -417,8 +417,7 @@ body {
     margin-right: 13px; }
   .header-navigation a.selected {
     color: #ff7373;
-    border-color: #ff7373;
-    padding-bottom: -4px; }
+    border-color: #ff7373; }
 
 .best-offer {
   background-color: #f0efee;
@@ -944,7 +943,6 @@ footer {
     border: none;
     color: #795151;
     background-color: #795151;
-    size: 1px;
     height: 1px; }
   footer .advantage {
     text-transform: capitalize;
